@@ -44,10 +44,6 @@ except (ImportError, AssertionError):
     import ultralytics
 
 from ultralytics.utils.checks import check_requirements
-<<<<<<< HEAD
-=======
-from ultralytics.utils.patches import torch_load
->>>>>>> 2540fd4c1c2d9186126a71b3eb681d3a0a11861e
 
 from utils import TryExcept, emojis
 from utils.downloads import curl_download, gsutil_getsize
@@ -1131,11 +1127,7 @@ def strip_optimizer(f="best.pt", s=""):
 
     Example: from utils.general import *; strip_optimizer()
     """
-<<<<<<< HEAD
     x = torch.load(f, map_location=torch.device("cpu"))
-=======
-    x = torch_load(f, map_location=torch.device("cpu"))
->>>>>>> 2540fd4c1c2d9186126a71b3eb681d3a0a11861e
     if x.get("ema"):
         x["model"] = x["ema"]  # replace model with ema
     for k in "optimizer", "best_fitness", "ema", "updates":  # keys

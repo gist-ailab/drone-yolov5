@@ -1,5 +1,5 @@
-path: /media/jemo/HDD1/Workspace/dset/Drone-Detection-Custom/250312_sejong/yolo_3class_dataset_0723
-# path: /ailab_mat2/dataset/drone/250312_sejong/yolo_dataset_0723
+# path: /media/jemo/HDD1/Workspace/dset/Drone-Detection-Custom/250312_sejong/yolo_3class_dataset_0723
+path: /ailab_mat2/dataset/drone/250312_sejong/yolo_3class_dataset_0723
 train: images/train
 val: images/val
 
@@ -16,5 +16,5 @@ names:
 # Additional training parameters (optional)
 # These can be overridden in train.py command
 epochs: 100
-batch_size: 16
+batch_size: 128
 img_size: 640

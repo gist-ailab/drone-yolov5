@@ -23,5 +23,5 @@ names:
 # Additional training parameters (optional)
 # These can be overridden in train.py command
 epochs: 100
-batch_size: 24
+batch_size: 128
 img_size: 640

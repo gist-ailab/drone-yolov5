@@ -6,10 +6,6 @@ import math
 import numpy as np
 import torch
 import torch.nn as nn
-<<<<<<< HEAD
-=======
-from ultralytics.utils.patches import torch_load
->>>>>>> 2540fd4c1c2d9186126a71b3eb681d3a0a11861e
 
 from utils.downloads import attempt_download
 
@@ -99,11 +95,7 @@ def attempt_load(weights, device=None, inplace=True, fuse=True):
 
     model = Ensemble()
     for w in weights if isinstance(weights, list) else [weights]:
-<<<<<<< HEAD
-        ckpt = torch.load(attempt_download(w), map_location="cpu")  # load
-=======
         ckpt = torch_load(attempt_download(w), map_location="cpu")  # load
->>>>>>> 2540fd4c1c2d9186126a71b3eb681d3a0a11861e
         ckpt = (ckpt.get("ema") or ckpt["model"]).to(device).float()  # FP32 model
 
         # Model compatibility updates
