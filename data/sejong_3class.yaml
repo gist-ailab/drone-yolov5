@@ -1,0 +1,18 @@
+path: /media/jemo/HDD1/Workspace/dset/Drone-Detection-Custom/250312_sejong/yolo_3class_dataset
+train: images/train
+val: images/val
+
+# Number of classes
+nc: 3
+
+# Class names (0-indexed)
+names:
+  0: Person
+  1: Door
+  2: Window
+
+# Additional training parameters (optional)
+# These can be overridden in train.py command
+epochs: 100
+batch_size: 16
+img_size: 640

@@ -1,0 +1,27 @@
+# path: /media/jemo/HDD1/Workspace/dset/Drone-Detection-Custom/250312_sejong/yolo_dataset_0723
+path: /ailab_mat2/dataset/drone/250312_sejong/yolo_dataset_0723
+train: images/train
+val: images/val
+
+
+# Number of classes
+nc: 10
+
+# Class names (0-indexed)
+names: 
+  0: Enemy
+  1: LandingMarker  
+  2: Obstacle
+  3: FireExt
+  4: Door
+  5: Victim
+  6: Ally
+  7: Exit
+  8: Window
+  9: Light
+
+# Additional training parameters (optional)
+# These can be overridden in train.py command
+epochs: 100
+batch_size: 24
+img_size: 640
