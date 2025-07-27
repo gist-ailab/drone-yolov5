@@ -1,0 +1,8 @@
+hailo parser onnx \
+    /ailab_mat2/dataset/drone/250312_sejong/yolo_weights/250724_yolov5/converted_models/best.onnx \
+    --net-name yolov5m_3class \
+    --har-path /ailab_mat2/dataset/drone/250312_sejong/yolo_weights/250724_yolov5/converted_models/yolov5m_3class.har \
+    --hw-arch hailo8 \
+    -y
+
+
