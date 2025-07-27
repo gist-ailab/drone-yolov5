@@ -1,0 +1,20 @@
+# independent_config.yaml
+network:
+  network_name: yolov5m_3class_250725
+
+paths:
+  alls_script: ""  # 빈 스크립트
+  network_path:
+  - /ailab_mat2/dataset/drone/250312_sejong/yolo_weights/250724_yolov5/pth_sources/yolov5m_3class_250725/weights/best.onnx
+
+quantization:
+  calib_set:
+  - /media/jemo/HDD1/Workspace/dset/Drone-Detection-Custom/250312_sejong/yolo_3class_dataset_0723/images/calibration_data
+
+classes:
+  num_classes: 3
+
+info:
+  task: object detection
+  input_shape: 640x640x3
+  framework: pytorch

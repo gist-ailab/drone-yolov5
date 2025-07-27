@@ -1,0 +1,53 @@
+# custom_yolov5m_drone_detection.yaml
+
+base:
+- base/yolov5.yaml
+
+postprocessing:
+  device_pre_post_layers:
+    nms: true
+  meta_arch: yolo
+  hpp: true
+
+quantization:
+  calib_set:
+  # 🔄 변경: 사용자의 캘리브레이션 이미지 경로로 수정
+  - /media/jemo/HDD1/Workspace/dset/Drone-Detection-Custom/250312_sejong/yolo_dataset/images/calib
+
+network:
+  # 🔄 변경: 커스텀 네트워크 이름으로 수정
+  network_name: yolov5n_3class_250725
+
+paths:
+  alls_script: yolov5n.alls
+  network_path:
+  # 🔄 변경: 사용자의 best.onnx 파일 경로로 수정
+  - /ailab_mat2/dataset/drone/250312_sejong/yolo_weights/250724_yolov5/pth_sources/yolov5n_3class_250725/weight/best.onnx  
+  # 🔄 변경: URL 제거 (커스텀 모델이므로)
+  # url: 제거
+
+info:
+  task: object detection
+  input_shape: 640x640x3
+  # 🔄 변경: 클래스 수에 맞게 출력 형태 수정 (10개 클래스)
+  output_shape: 10x5x80  # 또는 모델 구조에 따라 조정 필요
+  operations: 52.17G  # 원본과 유사할 것으로 예상
+  parameters: 21.78M  # 원본과 유사할 것으로 예상
+  framework: pytorch
+  # 🔄 변경: 훈련 데이터 정보 수정
+  training_data: drone_detection_custom
+  validation_data: drone_detection_custom
+  eval_metric: mAP
+  # 🔄 변경: 실제 성능으로 업데이트 (추후)
+  full_precision_result: 0.0  # 실제 테스트 후 업데이트
+  source: custom_trained_model
+  license_url: ""
+  license_name: ""
+
+# 🆕 추가: 커스텀 클래스 정보
+classes:
+  num_classes: 3
+  class_names:
+      0: Person
+      1: Door
+      2: Window

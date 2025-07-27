@@ -119,8 +119,8 @@ def verify_converted_images(target_dir):
 
 def main():
     # 설정값들
-    source_directory = "/media/jemo/HDD1/Workspace/dset/Drone-Detection-Custom/250312_sejong/yolo_dataset/images/val"
-    target_directory = "/media/jemo/HDD1/Workspace/src/Project/Drone24/edgeboard/Imx/yolov5/calibration_data"
+    source_directory = "/media/jemo/HDD1/Workspace/dset/Drone-Detection-Custom/250312_sejong/yolo_3class_dataset_0723/images/val"
+    target_directory = "/media/jemo/HDD1/Workspace/dset/Drone-Detection-Custom/250312_sejong/yolo_3class_dataset_0723/images/calibration_data"
     sample_count = 300
     jpg_quality = 95  # JPG 품질 (95는 고품질)
     

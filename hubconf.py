@@ -10,7 +10,6 @@ Usage:
     model = torch.hub.load('.', 'custom', 'yolov5s.pt', source='local')  # local repo
 """
 
-import torch
 from ultralytics.utils.patches import torch_load
 
 
